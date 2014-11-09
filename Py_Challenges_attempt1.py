@@ -92,17 +92,16 @@ for l in listRegexAttack:
 
 for line in listRegexAttack:
     dataAttack = line.split('\t')
-    url = 'http://freegeoip.net/json/%s' % (data[4])
+    url = 'http://www.telize.com/geoip/%s' % (data[4])
     print url
     try:
         response = json.loads(urllib.urlopen(url).read())
         print '\nLocation Information:'
-        print response
-        print response["country_name"]
+        print response["country"]
     except:
         continue
     print "Ip Address: %s, Request: %s, Status: %s, Origin Location: %s" % (dataAttack[4],dataAttack[10],dataAttack[6], response["country_code"])
-    print "http://maps.google.com/maps?z=12&t=m&q=loc:%s+%s" % (response["longitude"],response["latitude"])
+    print "http://maps.google.com/maps?z=12&t=m&q=loc:%s+%s" % (response["latitude"],response["longitude"])
 
 
 #BONUS!!! Generate a map displaying the Origin Locations of attacks
