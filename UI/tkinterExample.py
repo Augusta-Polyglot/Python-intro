@@ -23,6 +23,7 @@ class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master.title("Log Parser")
+        self.master.minsize(500,500)
         self.pack()
         self.createWidgets()
 
