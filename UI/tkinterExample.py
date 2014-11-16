@@ -1,4 +1,4 @@
-__author__ = 'fhilton'
+__author__ = 'fhilton & jsturtevant'
 #https://docs.python.org/2/library/tkinter.html#a-simple-hello-world-program
 from Tkinter import *
 
