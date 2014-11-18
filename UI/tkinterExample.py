@@ -57,6 +57,7 @@ class Application(tk.Frame):
         self.SetupQuit()
 
     def __init__(self, master=None):
+        #basic initialization
         tk.Frame.__init__(self, master)
         self.master.title("Log Parser")
         self.master.minsize(500,300)
@@ -64,6 +65,8 @@ class Application(tk.Frame):
 
         #makes grid expand
         self.grid(sticky=tk.N+tk.S+tk.E+tk.W)
+
+        #set up the widgets on the screen
         self.createWidgets()
 
         #hook up 'click event' to the listbox
