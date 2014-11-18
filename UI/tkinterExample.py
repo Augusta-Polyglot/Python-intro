@@ -23,7 +23,7 @@ class Application(tk.Frame):
 
         #Adds a button to the screen
         self.ImportFile = tk.Button(self)
-        self.ImportFile["text"] = "Hello",
+        self.ImportFile["text"] = "Load File"
         self.ImportFile["command"] = self.ImportFileCommand
         self.ImportFile.grid(row=0, column=0, sticky =tk.W + tk.N)
 
