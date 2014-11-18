@@ -12,6 +12,7 @@ class Application(tk.Frame):
             print line.strip()
             self.FileListBox.insert(tk.END, line.strip())
 
+
     def SetupQuit(self):
         self.QUIT = tk.Button(self)
         self.QUIT["text"] = "QUIT"
@@ -87,7 +88,9 @@ class Application(tk.Frame):
     def list_has_changed(self, selection):
         print "selection is", selection
         if len(selection) > 0:
-            self.CurrentLineInfo["text"] = self.FileListBox.get(selection[0])
+            line = self.FileListBox.get(selection[0])
+            data = line.split('\t')
+            self.CurrentLineInfo["text"] = data[4]
 
 #start the window
 root = tk.Tk()
