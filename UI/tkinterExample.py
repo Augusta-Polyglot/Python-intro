@@ -38,6 +38,7 @@ class Application(tk.Frame):
 
         self.FileListBox = tk.Listbox(self)
         self.FileListBox.grid(row = 2, column= 0, columnspan = 2 , sticky= tk.E + tk.W)
+        self.FileListBox.insert(tk.END, "a list entry")
 
         self.SetupQuit()
     def __init__(self, master=None):
