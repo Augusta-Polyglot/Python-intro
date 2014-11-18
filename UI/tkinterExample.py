@@ -60,7 +60,7 @@ class Application(tk.Frame):
         #basic initialization
         tk.Frame.__init__(self, master)
         self.master.title("Log Parser Answers")
-        self.master.minsize(500,300)
+        self.master.minsize(300,300)
         self.numberofrows = tk.StringVar()
 
         #makes grid expand
