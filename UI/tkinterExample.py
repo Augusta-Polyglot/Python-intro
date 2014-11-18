@@ -4,7 +4,10 @@ import Tkinter as tk
 
 class Application(tk.Frame):
     def ImportFileCommand(self):
-        print "hi there, everyone!"
+        file = open('../Log.txt', 'r')
+        lines = file.readlines()
+        self.numberofrows.set(len(lines))
+
 
     def SetupQuit(self):
         self.QUIT = tk.Button(self)
