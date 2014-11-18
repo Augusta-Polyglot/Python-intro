@@ -8,6 +8,9 @@ class Application(tk.Frame):
         lines = file.readlines()
         self.numberofrows.set(len(lines))
 
+        for line in lines:
+            print line.strip()
+            self.FileListBox.insert(tk.END, line.strip())
 
     def SetupQuit(self):
         self.QUIT = tk.Button(self)
@@ -23,6 +26,7 @@ class Application(tk.Frame):
         top=self.winfo_toplevel()
         top.rowconfigure(0, weight=1)
         top.columnconfigure(0, weight=1)
+        self.columnconfigure(2, minsize=600)
 
         #Adds a button to the screen
         self.ImportFile = tk.Button(self)
@@ -42,11 +46,7 @@ class Application(tk.Frame):
 
         #adds a listbox to screen
         self.FileListBox = tk.Listbox(self)
-        self.FileListBox.grid(row = 2, column= 0, columnspan = 2 , sticky= tk.E + tk.W)
-
-        #add items to the list box
-        self.FileListBox.insert(tk.END, "a list entry")
-        self.FileListBox.insert(tk.END, "another list entry")
+        self.FileListBox.grid(row = 2, column= 0, columnspan = 3 , sticky= tk.E + tk.W)
 
         #Add current line info lines
         self.CurrentLineInfoLabel = tk.Label(self)
@@ -54,7 +54,7 @@ class Application(tk.Frame):
         self.CurrentLineInfoLabel.grid(row = 3, column=0, sticky = tk.W)
 
         self.CurrentLineInfo = tk.Label(self)
-        self.CurrentLineInfo.grid(row = 3, column=1)
+        self.CurrentLineInfo.grid(row = 4, column=0)
         self.CurrentLineInfo["text"] = "Select a line above"
 
         self.SetupQuit()
