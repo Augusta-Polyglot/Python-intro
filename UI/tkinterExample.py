@@ -59,7 +59,7 @@ class Application(tk.Frame):
     def __init__(self, master=None):
         #basic initialization
         tk.Frame.__init__(self, master)
-        self.master.title("Log Parser")
+        self.master.title("Log Parser Answers")
         self.master.minsize(500,300)
         self.numberofrows = tk.StringVar()
 
