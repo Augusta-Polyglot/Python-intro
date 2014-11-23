@@ -1,12 +1,12 @@
 Useful references:
-http://effbot.org/tkinterbook/listbox.htm
-http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/listbox.html
+- http://effbot.org/tkinterbook/listbox.htm
+- http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/listbox.html
 
 Before beginning:
-Talk about Grid layout (links above)
-Talk about coordinates (links above)
-Talk about widgets (button, listbox)
-Talk about commands (button events)
+- Learn about Grid layout (links above)
+- Learn about coordinates (links above)
+- Learn about widgets (button, listbox)
+- Learn about commands (button events)
 
 ##Intro
 1. Change Title of the Screen
